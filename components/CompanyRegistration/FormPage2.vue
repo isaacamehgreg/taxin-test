@@ -1,5 +1,5 @@
 <template>
-  <v-form ref="form" v-model="valid" lazy-validation class="form">
+  <v-form ref="form" lazy-validation class="form">
     <p class="form-title mt-3">Please verify your information</p>
 
     <div class="info-container d-md-flex justify-space-between">

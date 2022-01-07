@@ -1,0 +1,21 @@
+.v-stepper
+  &__header
+    box-shadow: none !important
+    .v-divider
+      &.complete
+        border-color: #22C855 !important
+  &__step
+    &__step
+      background: transparent !important
+      border: 1px solid #FF6600
+      color: #FF6600 !important
+    &--active
+      .v-stepper__step__step
+        background-color: #FF6600 !important
+        border-color: #FF6600 !important
+        color: #fff !important
+    &--complete
+      .v-stepper__step__step
+        background-color: #22C855 !important
+        border-color: #22C855 !important
+        color: #fff !important

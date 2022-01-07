@@ -1,29 +1,21 @@
 <template>
-  <v-stepper v-model="e1" alt-labels>
-      <v-stepper-header>
-        <v-stepper-step step="1">
-          Register
-        </v-stepper-step>
-
-        <v-divider></v-divider>
-
-        <v-stepper-step step="2">
-          Verify
-        </v-stepper-step>
-
-        <v-divider></v-divider>
-
-        <v-stepper-step step="3">
-          Tax Report Bank
-        </v-stepper-step>
-      </v-stepper-header>
+  <v-stepper v-model="step" alt-labels flat>
+    <v-stepper-header>
+      <v-stepper-step step="1" :complete="step > 1">Register</v-stepper-step>
+      <v-divider :class="[{'complete' : step > 1}]"></v-divider>
+      <v-stepper-step step="2" :complete="step > 2">Verify</v-stepper-step>
+      <v-divider :class="[{'complete' : step > 2}]"></v-divider>
+      <v-stepper-step step="3" :complete="step > 3">Tax Report Bank</v-stepper-step>
+    </v-stepper-header>
 
     <v-stepper-items>
       <v-stepper-content step="1">
         <v-card elevation="0" class="mb-12 rounded-xl" color="#F4F4F4">
           <FormPage1 />
         </v-card>
-        <v-btn color="primary" @click="e1 = 2"> Proceed </v-btn>
+        <div class="d-flex justify-center">
+          <v-btn class="custom-btn" color="success" @click="++step"> Proceed </v-btn>
+        </div>
       </v-stepper-content>
 
       <v-stepper-content step="2">
@@ -31,9 +23,11 @@
           <FormPage2 />
         </v-card>
 
-        <v-btn color="primary" @click="e1 = 1"> Back </v-btn>
+        <div class="d-flex justify-center">
+          <v-btn class="custom-btn" outlined @click="--step"> Back </v-btn>
+          <v-btn class="custom-btn ml-3" color="success" @click="++step"> Continue </v-btn>
+        </div>
 
-        <v-btn color="primary" @click="e1 = 3"> Continue </v-btn>
       </v-stepper-content>
 
       <v-stepper-content step="3">
@@ -41,9 +35,10 @@
           <FormPage3 />
         </v-card>
 
-        <v-btn color="primary" @click="e1 = 2"> Back </v-btn>
-
-        <v-btn color="primary" @click="e1 = 4"> Continue </v-btn>
+        <div class="d-flex justify-center">
+          <v-btn class="custom-btn" outlined @click="--step"> Back </v-btn>
+          <v-btn class="custom-btn ml-3" color="success" @click="++step"> Continue </v-btn>
+        </div>
       </v-stepper-content>
 
       <v-stepper-content step="4">
@@ -63,7 +58,7 @@ import FormPage4 from "@/components/CompanyRegistration/FormPage4.vue"
 export default {
   data() {
     return {
-      e1: 1
+      step: 1
     };
   },
   components: {
@@ -75,5 +70,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
 </style>

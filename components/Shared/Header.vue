@@ -4,7 +4,7 @@
     <div class="socials d-flex align-center">
       <NuxtLink to="/" class="join-us me-4">Join us</NuxtLink>
       <NuxtLink to="/"><img src="@/assets/images/Facebook.png" class="social-icon me-3" alt=""></NuxtLink>
-      <NuxtLink to="/"><img src="@/assets/images/LinkedIn.png" class="social-icon me-3" alt=""></NuxtLink>
+      <NuxtLink to="/"><img src="@/assets/images/LinkedIN.png" class="social-icon me-3" alt=""></NuxtLink>
       <NuxtLink to="/"><img src="@/assets/images/Twitter.png" class="social-icon me-3" alt=""></NuxtLink>
       <NuxtLink to="/"><img src="@/assets/images/Instagram.png" class="social-icon" alt=""></NuxtLink>
     </div>

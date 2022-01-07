@@ -1,5 +1,5 @@
 <template>
-  <v-form ref="form" v-model="valid" lazy-validation class="form">
+  <v-form ref="form" lazy-validation class="form">
     <div class="d-md-flex text-center justify-center">
       <p class="form-title mt-3 me-3">
         Select one report to file free for 6 months!
